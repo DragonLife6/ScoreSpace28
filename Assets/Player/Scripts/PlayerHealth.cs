@@ -1,0 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerHealth : MonoBehaviour
+{
+    public bool isAlive = true;
+
+    [SerializeField] float maxPlayerHP = 100f;
+    float currentPlayerHP;
+
+    PlayerScore playerScore;
+
+    private void Start()
+    {
+        currentPlayerHP = maxPlayerHP; 
+        playerScore = GetComponent<PlayerScore>();
+    }
+
+    private void Update()
+    {
+        // For testing
+        if(Input.GetMouseButtonDown(0))
+        {
+            GetDamage(10f);
+            Debug.Log("Player health:" + currentPlayerHP.ToString());
+        }
+    }
+
+    public void GetDamage(float damage)
+    {
+        currentPlayerHP -= damage;
+
+        if(currentPlayerHP <= 0)
+        {
+            OnPlayerDeath();
+            Debug.Log("Player is dead now!");
+        }
+    }
+
+    void OnPlayerDeath()
+    {
+        StartCoroutine(playerScore.SendScore());
+
+        // StartCoroutine(RestartLevel()); // Restart level on player death
+    }
+}
