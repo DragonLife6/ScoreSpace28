@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public void ApplyDamage(float damage)
+    {
+        if (damage > 0)
+        {
+            GameObject.FindWithTag("Player").SendMessage("ApplyScore", 1);
+            Destroy(gameObject);
+        }
+    }
+
     /*private HitFlashScript flashScript;
     public float maxHealth = 20f;
     private float health;

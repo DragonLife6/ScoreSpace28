@@ -29,6 +29,11 @@ public class PlayerScore : MonoBehaviour
         yield return leaderboard.SubmitScoreRoutine(Mathf.FloorToInt(currentScore));
     }
 
+    public void ApplyScore(int score)
+    {
+        currentScore += score;
+    }
+
     public int GetPlayerScore()
     {
         return Mathf.FloorToInt(currentScore);

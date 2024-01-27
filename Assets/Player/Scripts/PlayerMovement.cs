@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
             transform.Translate(movement);
 
-            // Player rotation to movement direction
+            /*// Player rotation to movement direction
             if (horizontalInput > 0 && transform.localScale.x > 0)
             {
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
             else if (horizontalInput < 0 && transform.localScale.x < 0)
             {
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            }
+            }*/
         }
     }
 }
