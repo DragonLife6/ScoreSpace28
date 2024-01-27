@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d8d41f33385aa439950516af6cdf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePopup: {fileID: 2139387369336442378, guid: 0ce7b4a542ad2204da9e5c680cd5ab84, type: 3}
 --- !u!114 &-9168836597323467035
 MonoBehaviour:
   m_ObjectHideFlags: 0

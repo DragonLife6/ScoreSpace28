@@ -68,12 +68,14 @@ public class PlayerGunController : MonoBehaviour
         {
             angle += 180f;
         }
-
-        gunTransform.rotation = Quaternion.Slerp(gunTransform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), rotationSpeed * Time.deltaTime);
         
         if ((mousePos.x < playerTransform.position.x && gunTransform.localScale.x > 0) || (mousePos.x > playerTransform.position.x && gunTransform.localScale.x < 0))
         {
             gunTransform.localScale = new Vector3(-gunTransform.localScale.x, gunTransform.localScale.y, gunTransform.localScale.z);
+            gunTransform.rotation = Quaternion.identity;
+        } else
+        {
+            gunTransform.rotation = Quaternion.Slerp(gunTransform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), rotationSpeed * Time.deltaTime);
         }
     }
 }

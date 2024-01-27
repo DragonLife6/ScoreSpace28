@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] GameObject damagePopup;
+
     public void ApplyDamage(float damage)
     {
         if (damage > 0)
         {
             GameObject.FindWithTag("Player").SendMessage("ApplyScore", 1);
+            DamagePopupScript.Create(damagePopup, transform.position, 1, false);
             Destroy(gameObject);
         }
     }
@@ -20,7 +23,6 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] GameObject[] soulPrefabs;
     [SerializeField] bool isRespawnable = true;
 
-    [SerializeField] GameObject damagePopup;
 
     EnemyManager enemyManager;
     public float lastDamageTime;
