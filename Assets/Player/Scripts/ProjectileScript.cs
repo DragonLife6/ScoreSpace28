@@ -10,6 +10,9 @@ public class ProjectileScript : MonoBehaviour
 
     private void Start()
     {
+        //AUDIO
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Gunshot");
+
         Destroy(gameObject, 15f);
     }
 

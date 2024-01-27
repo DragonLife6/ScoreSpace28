@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: -2709654252555582122}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Projects/ScoreSpace28/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419069318945342
+  lastModified: 638419778486886429
   FileSizes:
   - Name: Desktop
     Value: 1014048
@@ -116,7 +116,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Projects/ScoreSpace28/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419069318965289
+  lastModified: 638419778486906374
   FileSizes:
   - Name: Desktop
     Value: 892
@@ -146,7 +146,7 @@ MonoBehaviour:
   - {fileID: -2709654252555582122}
   StringsBanks:
   - {fileID: -845615611719750572}
-  cacheTime: 638419069318965289
+  cacheTime: 638419778486906374
   cacheVersion: 131609
 --- !u!114 &6380706568089186208
 MonoBehaviour:
