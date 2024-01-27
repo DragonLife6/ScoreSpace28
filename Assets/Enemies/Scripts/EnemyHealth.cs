@@ -10,7 +10,9 @@ public class EnemyHealth : MonoBehaviour
     {
         if (damage > 0)
         {
-            GameObject.FindWithTag("Player").SendMessage("ApplyScore", 1);
+            GameObject player = GameObject.FindWithTag("Player");
+            player.SendMessage("ApplyScore", 1);
+            player.SendMessage("ApplyExpirience", 1);
             DamagePopupScript.Create(damagePopup, transform.position, 1, false);
             Destroy(gameObject);
         }
