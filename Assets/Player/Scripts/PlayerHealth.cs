@@ -17,16 +17,6 @@ public class PlayerHealth : MonoBehaviour
         playerScore = GetComponent<PlayerScore>();
     }
 
-    private void Update()
-    {
-        // For testing
-        if(Input.GetMouseButtonDown(0))
-        {
-            GetDamage(10f);
-            Debug.Log("Player health:" + currentPlayerHP.ToString());
-        }
-    }
-
     public void GetDamage(float damage)
     {
         currentPlayerHP -= damage;
@@ -41,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     void OnPlayerDeath()
     {
         StartCoroutine(playerScore.SendScore());
+        Destroy(gameObject);
 
         // StartCoroutine(RestartLevel()); // Restart level on player death
     }
