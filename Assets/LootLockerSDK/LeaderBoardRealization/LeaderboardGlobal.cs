@@ -4,6 +4,7 @@ using UnityEngine;
 using LootLocker.Requests;
 using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
+using UnityEngine.XR;
 
 // This script controlls global hightscore leaderboard (load / save data)
 public class LeaderboardGlobal : MonoBehaviour
@@ -34,6 +35,70 @@ public class LeaderboardGlobal : MonoBehaviour
         });
         yield return new WaitWhile(() => done == false);
     }
+
+    public void SetPlayerName(string name)
+    {
+        LootLockerSDKManager.SetPlayerName(name, (response) =>
+        {
+            if (response.success)
+            {
+                Debug.Log("Succesfully set player name");
+            }
+            else
+            {
+                Debug.Log("Could not set player name" + response.errorData.message);
+            }
+        });
+    }
+
+    public IEnumerator FetchPlayerName()
+    {
+        string playerID = PlayerPrefs.GetString("PlayerID");
+        bool done = false;
+
+        LootLockerSDKManager.GetPlayerName((response) =>
+        {
+            if (response.statusCode == 200)
+            {
+                Debug.Log("Successful:" + response.name);
+                PlayerPrefs.SetString("PlayerName", response.name);
+                done = true;
+            }
+            else
+            {
+                Debug.Log("failed: " + response.errorData.message);
+                done = true;
+            }
+        });
+        yield return new WaitWhile(() => done == false);
+    }
+
+
+
+
+    public IEnumerator FetchPlayerHighestScore()
+    {
+        string playerID = PlayerPrefs.GetString("PlayerID");
+        bool done = false;
+
+        LootLockerSDKManager.GetMemberRank(leaderboardKey, playerID, (response) =>
+        {
+            if (response.statusCode == 200)
+            {
+                Debug.Log("Successful:" + response.score.ToString());
+                PlayerPrefs.SetInt("PlayerScore", response.score);
+                done = true;
+            }
+            else
+            {
+                Debug.Log("failed: " + response.errorData.message);
+                done = true;
+            }
+        });
+        yield return new WaitWhile(() => done == false);
+    }
+
+
 
     public IEnumerator FetchTopHighscoresRoutine(int countOfScores = 10)
     {

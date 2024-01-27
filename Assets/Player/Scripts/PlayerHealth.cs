@@ -11,6 +11,16 @@ public class PlayerHealth : MonoBehaviour
 
     PlayerScore playerScore;
 
+    [SerializeField] GameObject deathMenu;
+
+    private void Awake()
+    {
+        if(deathMenu.activeInHierarchy)
+        {
+            deathMenu.SetActive(false);
+        }
+    }
+
     private void Start()
     {
         currentPlayerHP = maxPlayerHP; 
@@ -33,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(playerScore.SendScore());
         Destroy(gameObject);
 
-        // StartCoroutine(RestartLevel()); // Restart level on player death
+        Time.timeScale = 0f;
+        deathMenu.SetActive(true);
     }
 }

@@ -2,22 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LootLocker.Requests;
+using Unity.VisualScripting;
 
 public class LeaderboardManager : MonoBehaviour
 {
-    [SerializeField] LeaderboardGlobal leaderboard;
-
-
     void Start()
     {
-        StartCoroutine(SetupRoutine());
+        StartCoroutine(LoginRoutine());
     }
 
-    IEnumerator SetupRoutine()
-    {
-        yield return LoginRoutine();
-        yield return leaderboard.FetchTopHighscoresRoutine(10);
-    }
 
     IEnumerator LoginRoutine()
     {
