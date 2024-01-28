@@ -43,7 +43,7 @@ public class ProjectileScript : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Hit");
             currentPenetration++;
             if (CheckCritDamage())
             {

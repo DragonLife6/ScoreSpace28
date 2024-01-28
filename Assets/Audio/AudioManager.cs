@@ -9,16 +9,10 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
-        //audioMusic.start();
     }
 
-    public void GameStart()
+    public void Upgrade()
     {
-        //audioMusic.start();
-    }
-
-    public void GameOver()
-    {
-        //audioMusic.release();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Upgrade");
     }
 }
