@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: ShootDelay
   m_EditorClassIdentifier: 
   _id: 0
-  _name: Delay
-  _description: Decrease shooting delay
-  _image: {fileID: 0}
+  _name: Trigger
+  _descriptionLines:
+  - Adjustment of the trigger mechanism
+  - Fire rate +20%
+  _image: {fileID: -2043445736, guid: 9971788eb2188e940a7073131c9226e5, type: 3}

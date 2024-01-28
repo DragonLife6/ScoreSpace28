@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] GameObject damagePopup;
+    HitFlashScript hitFlash;
     bool isAlive = true;
 
     [SerializeField] float enemyMaxHealth = 10;
@@ -13,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         enemyHealth = enemyMaxHealth;
+        hitFlash = GetComponent<HitFlashScript>();
     }
 
     public void ApplyDamage(float damage)
@@ -32,12 +34,10 @@ public class EnemyHealth : MonoBehaviour
                 player.SendMessage("ApplyExpirience", 1);
 
                 DamagePopupScript.Create(damagePopup, transform.position, "+1", false, true);
-                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), false, false);
                 Destroy(gameObject);
-            } else
-            {
-                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), false, false);
-            }
+            } 
+            DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), false, false);
+            hitFlash.HitFlash();
         }
     }
 
@@ -55,13 +55,10 @@ public class EnemyHealth : MonoBehaviour
                 player.SendMessage("ApplyExpirience", 1);
 
                 DamagePopupScript.Create(damagePopup, transform.position, "+1", false, true);
-                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), true, false);
                 Destroy(gameObject);
             }
-            else
-            {
-                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), true, false);
-            }
+            DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), true, false);
+            hitFlash.HitFlash();
         }
     }
 

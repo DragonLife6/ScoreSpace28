@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 140e7d3b2d2c4b449af87266a503da3b
+guid: 9971788eb2188e940a7073131c9226e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,97 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerAndGun
+      name: Icons_Penetration
       rect:
         serializedVersion: 2
-        x: 67
-        y: 738
-        width: 469
-        height: 471
-      alignment: 9
-      pivot: {x: 0.34710306, y: 0.5475774}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a666ad554085a340af02edf830c381a
-      internalID: -2065639155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Gun
-      rect:
-        serializedVersion: 2
-        x: 1746
-        y: 1114
-        width: 469
-        height: 118
-      alignment: 9
-      pivot: {x: 0.33105573, y: 1.0291666}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20384832af0acd94b976911f7baca957
-      internalID: 422362504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Head
-      rect:
-        serializedVersion: 2
-        x: 2348
-        y: 1093
-        width: 164
-        height: 163
-      alignment: 9
-      pivot: {x: 0.49089086, y: 0.078399844}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d2fa5c01d684d14ebd16597fc37014a
-      internalID: 521750880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Hand_Right
-      rect:
-        serializedVersion: 2
-        x: 1948
-        y: 912
-        width: 108
-        height: 154
-      alignment: 9
-      pivot: {x: 0.5968289, y: 0.84923047}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 047a3f7b9d3b7ed4ab8e1809f5aa580c
-      internalID: -1805960404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Body
-      rect:
-        serializedVersion: 2
-        x: 2161
-        y: 889
-        width: 88
-        height: 178
+        x: 1652
+        y: 2112
+        width: 1215
+        height: 749
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,155 +150,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fb4c153305a52147b8b4bbf7fd64377
-      internalID: -2046745537
+      spriteID: 9e1a66d20ba1841438d2aab46b4e953c
+      internalID: -516865652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Hand_Left
+      name: Icons_Damage
       rect:
         serializedVersion: 2
-        x: 2332
-        y: 922
-        width: 180
-        height: 133
-      alignment: 9
-      pivot: {x: 0.10161811, y: 0.859442}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59adb2f0ec6b38440a705f30542b233c
-      internalID: 629596946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Leg_Right
-      rect:
-        serializedVersion: 2
-        x: 1654
-        y: 915
-        width: 59
-        height: 110
-      alignment: 9
-      pivot: {x: 0.57317805, y: 0.8763322}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b5e2ce4a3281ee429574b6ccffef917
-      internalID: -592301793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Leg_Left
-      rect:
-        serializedVersion: 2
-        x: 1780
-        y: 920
-        width: 60
-        height: 113
-      alignment: 9
-      pivot: {x: 0.30605876, y: 0.8296001}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91cb1b09b71a480479b3b5a24619ac32
-      internalID: 1759258777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gun_Full
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 38
-        width: 2427
-        height: 601
-      alignment: 9
-      pivot: {x: 0.49692228, y: 0.5546863}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 918889d85f4860040b0d343cba1d048e
-      internalID: -390085525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Leg_Right_B
-      rect:
-        serializedVersion: 2
-        x: 1643
-        y: 759
-        width: 46
-        height: 97
-      alignment: 9
-      pivot: {x: 0.6051928, y: 0.8342392}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1294da8654d3e674d9993d007af69835
-      internalID: -498739466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Leg_Left_B
-      rect:
-        serializedVersion: 2
-        x: 1801
-        y: 758
-        width: 54
-        height: 98
-      alignment: 9
-      pivot: {x: 0.32077593, y: 0.8372624}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6320a2b301b9d94f8e5f3ba695380ff
-      internalID: -1867398950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerAndGun_0
-      rect:
-        serializedVersion: 2
-        x: 948
-        y: 914
-        width: 253
-        height: 86
+        x: 124
+        y: 1993
+        width: 1176
+        height: 785
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f041c65749bfef41a303785424efcce
-      internalID: 1475432074
+      spriteID: 61a32efdacd31094baa1c9f70af75462
+      internalID: 672872579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_Spread
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1002
+        width: 1216
+        height: 755
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb9617481c41bf4b929987133e2b1e6
+      internalID: -1243082963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_Delay
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 1027
+        width: 1264
+        height: 806
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706a433a3ca156b458047d831060465e
+      internalID: -2043445736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_Count
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 124
+        width: 1254
+        height: 778
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83504ea535bc06b4bb4499f1f55a7635
+      internalID: -972370181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_Crit
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 124
+        width: 1208
+        height: 777
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c808b8f1c6c545145b1c337cdea989c9
+      internalID: -1980436436
       vertices: []
       indices: 
       edges: []
@@ -398,19 +272,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Gun_Full: -390085525
-      PlayerAndGun: -2065639155
-      PlayerAndGun_0: 1475432074
-      PlayerAndGun_7: 62737631
-      Player_Body: -2046745537
-      Player_Gun: 422362504
-      Player_Hand_Left: 629596946
-      Player_Hand_Right: -1805960404
-      Player_Head: 521750880
-      Player_Leg_Left: 1759258777
-      Player_Leg_Left_B: -1867398950
-      Player_Leg_Right: -592301793
-      Player_Leg_Right_B: -498739466
+      Icons_10: 776632124
+      Icons_11: 1089027297
+      Icons_13: -1081172793
+      Icons_2: 1825255636
+      Icons_3: -1959634389
+      Icons_5: 833246267
+      Icons_6: 299236092
+      Icons_7: 1531939890
+      Icons_Count: -972370181
+      Icons_Crit: -1980436436
+      Icons_Damage: 672872579
+      Icons_Delay: -2043445736
+      Icons_Penetration: -516865652
+      Icons_Spread: -1243082963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 1
   userData: 

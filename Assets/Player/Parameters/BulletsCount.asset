@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: BulletsCount
   m_EditorClassIdentifier: 
   _id: 4
-  _name: Bullets count
-  _description: Increase bullets count
-  _image: {fileID: 0}
+  _name: Barrel
+  _descriptionLines:
+  - Additional rifle barrel.
+  - Number of bullets +1
+  - Damage -15%
+  - Spread angle +15%
+  _image: {fileID: -972370181, guid: 9971788eb2188e940a7073131c9226e5, type: 3}

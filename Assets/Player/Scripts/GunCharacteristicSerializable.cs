@@ -7,7 +7,7 @@ public class GunCharacteristicSerializable : ScriptableObject
 {
     [SerializeField] int _id;
     [SerializeField] string _name;
-    [SerializeField] string _description;
+    [SerializeField] string[] _descriptionLines;
     [SerializeField] Sprite _image;
 
     public string GetName()
@@ -20,7 +20,12 @@ public class GunCharacteristicSerializable : ScriptableObject
     }
     public string GetDescription()
     {
-        return _description;
+        string resultText = _descriptionLines[0] + "\n\n";
+        for (int i = 1; i < _descriptionLines.Length; i++)
+        {
+            resultText += _descriptionLines[i] + "\n";
+        }
+        return resultText;
     }
     public Sprite GetImage()
     {
