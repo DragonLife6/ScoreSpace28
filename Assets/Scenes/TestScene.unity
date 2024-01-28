@@ -1555,21 +1555,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 364951153}
-        m_TargetAssemblyTypeName: UpgradeMenuScript, Assembly-CSharp
-        m_MethodName: OnVariantClicked
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1930934694}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: Upgrade
+      - m_Target: {fileID: 1418615351}
+        m_TargetAssemblyTypeName: DeathMenuScript, Assembly-CSharp
+        m_MethodName: RestartButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4266,21 +4254,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 364951153}
-        m_TargetAssemblyTypeName: UpgradeMenuScript, Assembly-CSharp
-        m_MethodName: OnVariantClicked
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1930934694}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: Upgrade
+      - m_Target: {fileID: 1418615351}
+        m_TargetAssemblyTypeName: DeathMenuScript, Assembly-CSharp
+        m_MethodName: ReloadButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5934,7 +5910,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1338729509}
   gunTransform: {fileID: 1788961232}
   rotationSpeed: 10
-  bulletPrefab: {fileID: 2291279025235320014, guid: 8b82ba1fd4ad25948a85cf9135b64511, type: 3}
+  bulletPrefab: {fileID: 2291279025235320014, guid: 3041781af80b12e4484960dd68d9bae2, type: 3}
   bulletsSpawnPosition: {fileID: 840151572}
   isShooting: 0
   shootDelay: 0.5
