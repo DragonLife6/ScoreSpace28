@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{315f03c0-f5ac-4805-a550-05027fedfd71}">
+		<property name="assetPath">
+			<value>FX/Spider_Dead02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.63020408163265307</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4f10b40e-fbcd-40aa-9dd5-7c1c7be371c7}</destination>
+		</relationship>
+	</object>
+</objects>
