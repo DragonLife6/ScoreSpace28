@@ -36,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void GetDamage(float damage)
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHurt");
         currentPlayerHP -= damage;
         hpSlider.UpdateSlider(currentPlayerHP, maxPlayerHP);
         hitFlashScript.HitFlash();
