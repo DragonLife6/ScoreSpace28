@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD SS28/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419804040702979
+  lastModified: 638419859731859721
   FileSizes:
   - Name: Desktop
-    Value: 926
+    Value: 968
   Exists: 1
 --- !u!114 &-5050355610138478655
 MonoBehaviour:
@@ -143,10 +143,10 @@ MonoBehaviour:
   Path: FMOD SS28/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419804040692754
+  lastModified: 638419859731839793
   FileSizes:
   - Name: Desktop
-    Value: 1019744
+    Value: 1025536
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -169,13 +169,41 @@ MonoBehaviour:
   - {fileID: -4788717730733255215}
   - {fileID: -2720071282477444469}
   - {fileID: -2966830706569306505}
+  - {fileID: 6205150721158731281}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2267449646399637291}
   StringsBanks:
   - {fileID: -5230622191285760714}
-  cacheTime: 638419804040702979
+  cacheTime: 638419859731859721
   cacheVersion: 131609
+--- !u!114 &6205150721158731281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SpiderDead
+  m_EditorClassIdentifier: 
+  Path: event:/SpiderDead
+  Guid:
+    Data1: -963022958
+    Data2: 1148900599
+    Data3: 1243943353
+    Data4: -2132973042
+  Banks:
+  - {fileID: -2267449646399637291}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6380706568089186208
 MonoBehaviour:
   m_ObjectHideFlags: 0

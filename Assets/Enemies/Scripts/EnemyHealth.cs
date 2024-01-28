@@ -23,6 +23,9 @@ public class EnemyHealth : MonoBehaviour
 
             if (enemyHealth <= 0)
             {
+                //AUDIO SPIDER DEAD
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SpiderDead");
+
                 isAlive = false;
                 GameObject player = GameObject.FindWithTag("Player");
                 player.SendMessage("ApplyScore", 1);
