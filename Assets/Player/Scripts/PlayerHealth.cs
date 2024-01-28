@@ -14,6 +14,9 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] GameObject deathMenu;
 
+    //AUDIO
+    public GameObject audioManager;
+
     private void Awake()
     {
         if(deathMenu.activeInHierarchy)
@@ -45,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
     {
         StartCoroutine(playerScore.SendScore());
         Destroy(gameObject);
-
+        Destroy(audioManager);
         Time.timeScale = 0f;
         deathMenu.SetActive(true);
     }
