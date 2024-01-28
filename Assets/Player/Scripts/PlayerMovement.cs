@@ -10,15 +10,10 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     PlayerHealth playerHealth;
 
-    //public AudioClip footstepsSound;
-    //private AudioSource audioSource;
-
     private void Start()
     {
         animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
-
-        //audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -32,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
             float verticalInput = Input.GetAxis("Vertical");
 
             movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime;
-            
-            
+
+
             /* Player walk animation and sound
             if (movement != Vector3.zero)
             {

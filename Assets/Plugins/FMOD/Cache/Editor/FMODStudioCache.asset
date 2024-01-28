@@ -49,7 +49,34 @@ MonoBehaviour:
   - {fileID: -2709654252555582122}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 562
+--- !u!114 &-2966830706569306505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Hit
+  Guid:
+    Data1: -1604323008
+    Data2: 1087649576
+    Data3: 2116560257
+    Data4: -292541478
+  Banks:
+  - {fileID: -2709654252555582122}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -96,10 +123,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Projects/ScoreSpace28/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419778486886429
+  lastModified: 638419804040692754
   FileSizes:
   - Name: Desktop
-    Value: 1014048
+    Value: 1019744
   Exists: 1
 --- !u!114 &-845615611719750572
 MonoBehaviour:
@@ -116,10 +143,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/Projects/ScoreSpace28/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419778486906374
+  lastModified: 638419804040702979
   FileSizes:
   - Name: Desktop
-    Value: 892
+    Value: 926
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -141,12 +168,13 @@ MonoBehaviour:
   - {fileID: -5050355610138478655}
   - {fileID: -4788717730733255215}
   - {fileID: -2720071282477444469}
+  - {fileID: -2966830706569306505}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2709654252555582122}
   StringsBanks:
   - {fileID: -845615611719750572}
-  cacheTime: 638419778486906374
+  cacheTime: 638419804040702979
   cacheVersion: 131609
 --- !u!114 &6380706568089186208
 MonoBehaviour:
