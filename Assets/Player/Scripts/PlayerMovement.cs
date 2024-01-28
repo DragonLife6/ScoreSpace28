@@ -7,12 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5.0f;
     
-    Animator animator;
+    [SerializeField] Animator animator;
     PlayerHealth playerHealth;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         playerHealth = GetComponent<PlayerHealth>();
     }
 
@@ -29,24 +28,17 @@ public class PlayerMovement : MonoBehaviour
             movement = new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime;
 
 
-            /* Player walk animation and sound
+            //Player walk animation and sound
             if (movement != Vector3.zero)
             {
-                animator.SetFloat("speed", moveSpeed);
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.PlayOneShot(footstepsSound);
-                }
+                animator.SetFloat("Speed", moveSpeed);
+                // Steps sounds, I guess
             }
             else
             {
-                if (audioSource.isPlaying)
-                {
-                    audioSource.Stop();
-                }
-                animator.SetFloat("speed", 0);
+                animator.SetFloat("Speed", 0);
             }
-            */
+            
 
             transform.Translate(movement);
 

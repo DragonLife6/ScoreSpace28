@@ -171,6 +171,8 @@ public class PlayerGunController : MonoBehaviour
                 bullet.SetParameters(damage, critChance, bulletsPenetration);
             }
 
+            //AUDIO
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Gunshot");
             yield return new WaitForSeconds(shootDelay);
         }
     }
