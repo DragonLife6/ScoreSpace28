@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public bool isAlive = true;
 
+    HitFlashScript hitFlashScript;
     [SerializeField] SliderScript hpSlider;
     [SerializeField] float maxPlayerHP = 100f;
     float currentPlayerHP;
@@ -30,12 +31,14 @@ public class PlayerHealth : MonoBehaviour
         currentPlayerHP = maxPlayerHP;
         hpSlider.UpdateSlider(currentPlayerHP, maxPlayerHP);
         playerScore = GetComponent<PlayerScore>();
+        hitFlashScript = GetComponent<HitFlashScript>();
     }
 
     public void GetDamage(float damage)
     {
         currentPlayerHP -= damage;
         hpSlider.UpdateSlider(currentPlayerHP, maxPlayerHP);
+        hitFlashScript.HitFlash();
 
         if (currentPlayerHP <= 0)
         {

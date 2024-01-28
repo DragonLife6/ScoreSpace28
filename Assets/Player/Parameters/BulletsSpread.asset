@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: BulletsSpread
   m_EditorClassIdentifier: 
   _id: 2
-  _name: Bullets spread
-  _description: Decrease bullets spread radius
-  _image: {fileID: 0}
+  _name: Buttstock
+  _descriptionLines:
+  - Buttstock adjustment.
+  - Spread angle -20%
+  _image: {fileID: -1243082963, guid: 9971788eb2188e940a7073131c9226e5, type: 3}

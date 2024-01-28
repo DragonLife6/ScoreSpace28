@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Penetration
   m_EditorClassIdentifier: 
   _id: 5
-  _name: Penetration
-  _description: Bullets can penetrate through the enemies
-  _image: {fileID: 0}
+  _name: Bullets
+  _descriptionLines:
+  - Change bullet type.
+  - Bullet penetration +1
+  - Damage -10%
+  - Fire rate -15%
+  _image: {fileID: -516865652, guid: 9971788eb2188e940a7073131c9226e5, type: 3}

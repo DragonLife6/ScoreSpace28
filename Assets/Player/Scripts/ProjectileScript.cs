@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileScript : MonoBehaviour
 {
     float damage = 10f;
-    float moveSpeed = 15f;
+    float moveSpeed = 25f;
 
     int bulletMaxPenetrations = 1;
     int currentPenetration = 0;

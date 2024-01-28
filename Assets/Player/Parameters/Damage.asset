@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Damage
   m_EditorClassIdentifier: 
   _id: 1
-  _name: Damage
-  _description: Increase bullets damage
-  _image: {fileID: 0}
+  _name: Receiver
+  _descriptionLines:
+  - Replacement of the receiver.
+  - Damage +20%
+  _image: {fileID: 672872579, guid: 9971788eb2188e940a7073131c9226e5, type: 3}

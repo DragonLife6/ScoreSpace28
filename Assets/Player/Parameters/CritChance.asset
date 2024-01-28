@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: CritChance
   m_EditorClassIdentifier: 
   _id: 3
-  _name: Crit Chance
-  _description: Inrease critical damage chance
-  _image: {fileID: 0}
+  _name: Scope
+  _descriptionLines:
+  - Increasing scope magnification.
+  - Critical Chance +5%
+  _image: {fileID: -1980436436, guid: 9971788eb2188e940a7073131c9226e5, type: 3}

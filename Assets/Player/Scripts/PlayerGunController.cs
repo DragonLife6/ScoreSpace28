@@ -124,7 +124,7 @@ public class PlayerGunController : MonoBehaviour
             case 5:
                 bulletsPenetration += 1;
                 damage *= 0.9f;
-                shootDelay *= 1.2f;
+                shootDelay *= 1.15f;
                 break;
             default:
                 break;
