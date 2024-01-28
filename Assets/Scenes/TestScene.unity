@@ -8563,6 +8563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788961232}
   - component: {fileID: 1788961233}
+  - component: {fileID: 1788961234}
   m_Layer: 0
   m_Name: PlayerGun
   m_TagString: Untagged
@@ -8640,6 +8641,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1788961234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788961231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34db7851f1f1b4848866b38b520344c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 1338729509}
+  gunTransform: {fileID: 1788961232}
+  rotationSpeed: 5
+  bulletPrefab: {fileID: 2291279025235320014, guid: 3041781af80b12e4484960dd68d9bae2, type: 3}
+  bulletsSpawnPosition: {fileID: 840151572}
+  isShooting: 0
+  shootDelay: 0.5
+  critChance: 0.05
+  damage: 10
+  bulletAngleSpread: 10
+  bulletsAtTheTime: 1
+  bulletsPenetration: 1
 --- !u!1 &1846329887
 GameObject:
   m_ObjectHideFlags: 0
