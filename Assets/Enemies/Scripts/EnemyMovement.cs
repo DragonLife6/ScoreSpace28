@@ -29,6 +29,8 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 moveDirection;
 
+        moveSpeed += 0.01f * Time.deltaTime;
+
         if (player != null)
         {
             moveDirection = (player.position - transform.position);
@@ -41,31 +43,21 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.Translate(moveDirection.normalized * moveSpeed * Time.deltaTime);
         }
-        /* For attacking with animation from distance
-         * else 
-        {
-            float distanceToPlayer = moveDirection.magnitude;
-
-            if (distanceToPlayer > attackDistance)
-            {
-                transform.Translate(moveDirection.normalized * moveSpeed * Time.deltaTime);
-                attackCollider.enabled = false;
-            }
-            else
-            {
-                animator.SetTrigger("Attack");
-                attackCollider.enabled = true;
-            }
-        } */
-        if (moveDirection.x < 0 && transform.localScale.x > 0)
-        {
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }
-        else if (moveDirection.x > 0 && transform.localScale.x < 0)
+        
+        if ((moveDirection.x < 0 && transform.localScale.x < 0) || (moveDirection.x > 0 && transform.localScale.x > 0))
         {
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
         
+    }
+
+    public void ApplyDamageCoef(float coef)
+    {
+        damage *= coef;
+    }
+    public void ApplySpeedCoef(float coef)
+    {
+        moveSpeed *= coef;
     }
 
     void OnTriggerEnter2D(Collider2D other)

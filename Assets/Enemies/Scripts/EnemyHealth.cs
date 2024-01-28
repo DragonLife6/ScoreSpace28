@@ -5,115 +5,73 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] GameObject damagePopup;
+    bool isAlive = true;
+
+    [SerializeField] float enemyMaxHealth = 10;
+    float enemyHealth;
+
+    private void Start()
+    {
+        enemyHealth = enemyMaxHealth;
+    }
 
     public void ApplyDamage(float damage)
     {
-        if (damage > 0)
+        if (isAlive)
         {
-            GameObject player = GameObject.FindWithTag("Player");
-            player.SendMessage("ApplyScore", 1);
-            player.SendMessage("ApplyExpirience", 1);
-            DamagePopupScript.Create(damagePopup, transform.position, 1, false);
-            Destroy(gameObject);
+            enemyHealth -= damage;
+
+            if (enemyHealth <= 0)
+            {
+                isAlive = false;
+                GameObject player = GameObject.FindWithTag("Player");
+                player.SendMessage("ApplyScore", 1);
+                player.SendMessage("ApplyExpirience", 1);
+
+                DamagePopupScript.Create(damagePopup, transform.position, "+1", false, true);
+                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), false, false);
+                Destroy(gameObject);
+            } else
+            {
+                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), false, false);
+            }
         }
     }
 
-    /*private HitFlashScript flashScript;
-    public float maxHealth = 20f;
-    private float health;
-    Animator animator;
-    [SerializeField] GameObject[] soulPrefabs;
-    [SerializeField] bool isRespawnable = true;
-
-
-    EnemyManager enemyManager;
-    public float lastDamageTime;
-    public bool spawnedWithManager = true;
-
-    // Start is called before the first frame update
-    void Start()
+    public void ApplyCritDamage(float damage)
     {
-        lastDamageTime = 0f;
-        health = maxHealth;
-        flashScript = GetComponent<HitFlashScript>();
-        animator = GetComponent<Animator>();
-        enemyManager = GameObject.Find("Enemy_manager").GetComponent<EnemyManager>();
-
-        if (!spawnedWithManager)
+        if (isAlive)
         {
-            enemyManager.AddEnemy(transform);
-        }
+            enemyHealth -= damage;
 
-        if (isRespawnable)
-        {
-            float randomRespawnDelay = Random.Range(100, 300) / 10f;
+            if (enemyHealth <= 0)
+            {
+                isAlive = false;
+                GameObject player = GameObject.FindWithTag("Player");
+                player.SendMessage("ApplyScore", 1);
+                player.SendMessage("ApplyExpirience", 1);
 
-            Invoke(nameof(Respawn), randomRespawnDelay);
+                DamagePopupScript.Create(damagePopup, transform.position, "+1", false, true);
+                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), true, false);
+                Destroy(gameObject);
+            }
+            else
+            {
+                DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), true, false);
+            }
         }
     }
 
-    private bool DetermineCrit(float chance)
+    public void ApplyMaxHealthCoef(float coef)
     {
-        float num = Random.Range(0, 1f);
-
-        if(chance < num)
+        enemyMaxHealth *= coef;
+        if (coef <= 2f)
         {
-            return false;
-        } 
-
-        return true;
-    }
-
-    public void GetDamage(float damage, float chance, float power)
-    {
-        if(DetermineCrit(chance))
-        {
-            health -= damage * power;
-
-            DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage * power), true);
+            transform.localScale = Vector3.one * coef;
         } else
         {
-            health -= damage;
-
-            DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage), false);
+            transform.localScale = Vector3.one * 2f;
         }
-
-        flashScript.HitFlash(); // Додати візуалізацію для критичного удару
-
-        if (health <= 0)
-        {
-            DeathAndDestroy();
-        }
-        lastDamageTime = Time.time;
+        enemyHealth = enemyMaxHealth;
     }
-
-
-    public void GetDamage(float damage)
-    {
-        health -= damage;
-
-        DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage), false);
-
-        if (health <= 0)
-        {
-            DeathAndDestroy();
-        }
-        flashScript.HitFlash();
-        lastDamageTime = Time.time;
-    }
-
-    private void Respawn()
-    {
-        Destroy(gameObject, 0.4f);
-        animator.Play("SoulEnemyRespawn");
-        enemyManager.SpawnEnemy(gameObject);
-    }
-
-    private void DeathAndDestroy()
-    {
-        Destroy(gameObject, 0.3f);
-        animator.Play("Death");
-        int randomPrefab = Random.Range(0, soulPrefabs.Length);
-        Instantiate(soulPrefabs[randomPrefab], transform.position, Quaternion.identity);
-    }*/
 }

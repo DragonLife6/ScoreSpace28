@@ -1,19 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerExpirience : MonoBehaviour
 {
+    [SerializeField] GunCharacteristicSerializable[] characteristicsData; // For storing images, titles and descriptions of parameters
+
     int playerExpirience = 0;
     [SerializeField] int expForLevelUP;
-    PlayerGunController gunController;
+    [SerializeField] UpgradeMenuScript upgradeMenu;
 
     [SerializeField] SliderScript xpSlider;
 
     // Start is called before the first frame update
     void Start()
     {
-        gunController = GetComponent<PlayerGunController>();
         playerExpirience = 0;
         xpSlider.UpdateSlider(playerExpirience, expForLevelUP);
     }
@@ -25,7 +27,7 @@ public class PlayerExpirience : MonoBehaviour
         if (playerExpirience >= expForLevelUP)
         {
             playerExpirience = 0;
-            expForLevelUP = Mathf.FloorToInt(expForLevelUP * 1.1f);
+            expForLevelUP = Mathf.FloorToInt(Mathf.Pow(expForLevelUP, 1.15f));
 
             LevelUP();
         }
@@ -35,6 +37,25 @@ public class PlayerExpirience : MonoBehaviour
 
     private void LevelUP()
     {
-        gunController.UpgradeRandomParameter();
+        Time.timeScale = 0f;
+        upgradeMenu.gameObject.SetActive(true);
+        GunCharacteristicSerializable[] selectedElements = GetRandomElements(characteristicsData, 3);
+
+        upgradeMenu.SetupUpgradeMenu(selectedElements);
+    }
+
+    GunCharacteristicSerializable[] GetRandomElements<GunCharacteristicSerializable>(GunCharacteristicSerializable[] array, int count)
+    {
+        List<GunCharacteristicSerializable> resultList = new List<GunCharacteristicSerializable>();
+        List<GunCharacteristicSerializable> sourceList = new List<GunCharacteristicSerializable>(array);
+
+        for (int i = 0; i < Mathf.Min(count, array.Length); i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, sourceList.Count);
+            resultList.Add(sourceList[randomIndex]);
+            sourceList.RemoveAt(randomIndex);
+        }
+
+        return resultList.ToArray();
     }
 }
