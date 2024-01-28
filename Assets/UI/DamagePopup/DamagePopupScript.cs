@@ -15,6 +15,7 @@ public class DamagePopupScript : MonoBehaviour
 
     [SerializeField] Color standartColor;
     [SerializeField] Color criticalColor;
+    [SerializeField] Color scoreColor;
 
     private void Awake()
     {
@@ -47,23 +48,27 @@ public class DamagePopupScript : MonoBehaviour
         }
     }
 
-    public static DamagePopupScript Create(GameObject damagePopupPrefab, Vector3 position, int damage, bool isCriticalHit)
+    public static DamagePopupScript Create(GameObject damagePopupPrefab, Vector3 position, string damage, bool isCriticalHit, bool isScorePopup)
     {
         Vector3 spawnPosition = new Vector3(position.x + Random.Range(-0.3f, 0.3f), position.y + Random.Range(0.1f, 0.5f), 0);
 
         DamagePopupScript damagePopupRef = Instantiate(damagePopupPrefab, spawnPosition, Quaternion.identity).GetComponent<DamagePopupScript>();
-        damagePopupRef.Setup(damage, isCriticalHit);
+        damagePopupRef.Setup(damage, isCriticalHit, isScorePopup);
 
         return damagePopupRef;
     }
 
-    public void Setup(int damage, bool isCriticalHit)
+    public void Setup(string damage, bool isCriticalHit, bool isScorePopup)
     {
-        textMesh.SetText("+" + damage.ToString());
+        textMesh.SetText(damage);
 
-        if(isCriticalHit)
+        if(isScorePopup)
         {
-            textMesh.fontSize += 1;
+            textMesh.fontSize = Mathf.FloorToInt(textMesh.fontSize * 1.6f);
+            textColor = scoreColor;
+        } else if(isCriticalHit)
+        {
+            textMesh.fontSize = Mathf.FloorToInt(textMesh.fontSize * 1.2f);
             textColor = criticalColor;
         } else
         {

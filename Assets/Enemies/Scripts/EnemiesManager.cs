@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemiesManager : MonoBehaviour
@@ -8,8 +9,13 @@ public class EnemiesManager : MonoBehaviour
     [SerializeField] bool testMode = false;
 
     [SerializeField] GameObject[] enemyPrefabs;
+
     int maxEnemies = 1; // Count of enemies spawned every "spawnInterval" seconds
     float spawnInterval = 1.0f;
+    float maxHPCoef = 1f;
+    float movementSpeedCoef = 1f;
+    float damageCoef = 1f;
+    float superMutationChance = 0.01f;
 
     [Tooltip("Spawn distance from player position")]
     public float spawnDistance = 20.0f;
@@ -25,6 +31,7 @@ public class EnemiesManager : MonoBehaviour
     private List<Transform> enemies = new List<Transform>(); // List of all enemies
 
     float nextParameterChangeTime; // For changing difficulty
+    [SerializeField] float changeInterval = 30f;
 
     void Start()
     {
@@ -33,13 +40,41 @@ public class EnemiesManager : MonoBehaviour
             InvokeRepeating("SpawnEnemies", 0.1f, spawnInterval);
         }
 
-        nextParameterChangeTime = Time.time + 30f;
+        nextParameterChangeTime = Time.time + changeInterval;
     }
 
     private void ChangeParameters()
     {
-        maxEnemies++;
-        spawnInterval *= 0.95f;
+        int randomDistNum = Random.Range(0, 100);
+
+        if (randomDistNum < 20) // 20% chance
+        {
+            maxEnemies++;
+
+            Debug.Log("+ max enemies");
+        }
+        else if (randomDistNum < 40) // 20% chance
+        {
+            spawnInterval *= 0.95f;
+            Debug.Log("- spawn interval");
+        }
+        else if (randomDistNum < 75) // 35% chance
+        {
+            maxHPCoef *= 1.1f;
+            Debug.Log("+ max health" + maxHPCoef.ToString());
+        }
+        else if (randomDistNum < 95) // 20% chance
+        {
+            movementSpeedCoef *= 1.05f;
+            Debug.Log("+ move speed");
+        }
+        else // 5% chance
+        {
+            damageCoef *= 1.05f;
+            Debug.Log("+ damage");
+        }
+
+        superMutationChance += 0.01f;
     }
 
     private void Update()
@@ -47,24 +82,12 @@ public class EnemiesManager : MonoBehaviour
         if (Time.time >= nextParameterChangeTime)
         {
             ChangeParameters();
-            nextParameterChangeTime = Time.time + 30f;
-        }
-
-
-        // Respawn enemies if they are too far from player
-        /*
-        for (int i = 0; i < enemies.Count; i++)
-        {
-            if (GetDistance(enemies[i]) > maxDistance)
+            nextParameterChangeTime = Time.time + changeInterval;
+            if (changeInterval >= 3f)
             {
-                GameObject enemyRef = enemies[i].gameObject;
-                if (enemyRef != null)
-                {
-                    Destroy(enemyRef);
-                    SpawnEnemy(enemyRef);
-                }
+                changeInterval *= 0.9f;
             }
-        }*/
+        }
     }
 
     public void AddEnemy(Transform newEnemy)
@@ -75,8 +98,11 @@ public class EnemiesManager : MonoBehaviour
     public void SpawnEnemy(GameObject enemyRef)
     {
         Vector3 spawnPosition = GetRandomSpawnPosition();
-        Transform newEnemy = Instantiate(enemyRef, spawnPosition, Quaternion.identity).transform;
-        enemies.Add(newEnemy);
+        GameObject newEnemy = Instantiate(enemyRef, spawnPosition, Quaternion.identity);
+        newEnemy.SendMessage("ApplyMaxHealthCoef", maxHPCoef);
+        newEnemy.SendMessage("ApplyDamageCoef", damageCoef);
+        newEnemy.SendMessage("ApplySpeedCoef", movementSpeedCoef);
+        enemies.Add(newEnemy.transform);
     }
 
     void SpawnEnemies()
@@ -91,9 +117,12 @@ public class EnemiesManager : MonoBehaviour
             int randomNum = Random.Range(minEnemyLvl, maxEnemyLvl);
 
             Vector3 spawnPosition = GetRandomSpawnPosition();
-            Transform newEnemy = Instantiate(enemyPrefabs[randomNum], spawnPosition, Quaternion.identity).transform;
-
-            enemies.Add(newEnemy);
+            GameObject newEnemy = Instantiate(enemyPrefabs[randomNum], spawnPosition, Quaternion.identity);
+            newEnemy.SendMessage("ApplyMaxHealthCoef", maxHPCoef);
+            newEnemy.SendMessage("ApplyDamageCoef", damageCoef);
+            newEnemy.SendMessage("ApplySpeedCoef", movementSpeedCoef);
+            //newEnemy.SendMessage("ApplyMutationChance", superMutationChance); // Visual mutation
+            enemies.Add(newEnemy.transform);
         }
     }
 

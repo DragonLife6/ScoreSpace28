@@ -22,7 +22,9 @@ public class PlayerGunController : MonoBehaviour
     [SerializeField] float damage = 10f;
     [SerializeField] float bulletAngleSpread = 10f;
     [SerializeField] int bulletsAtTheTime = 1;
+    [SerializeField] int bulletsPenetration = 1;
 
+    int[] paramsLevels = new int[] { 1, 1, 1, 1, 1, 1 };
 
     public List<float> GetGunData()
     {
@@ -33,7 +35,7 @@ public class PlayerGunController : MonoBehaviour
             damage,
             bulletAngleSpread,
             bulletsAtTheTime,
-            0f // empty slot for future)
+            bulletsPenetration // empty slot for future)
         };
 
         return dataList;
@@ -41,30 +43,95 @@ public class PlayerGunController : MonoBehaviour
 
     public void UpgradeRandomParameter()
     {
-        int randomParameterNum = Random.Range(0, 5);
+        int randomDistNum = Random.Range(0, 100);
+        int parameterNum;
 
-        switch (randomParameterNum)
+        if(randomDistNum < 30) // 30% chance
+        {
+            parameterNum = 0; 
+        } else if(randomDistNum < 60) // 30% chance
+        {
+            parameterNum = 1;
+        } else if(randomDistNum < 80) // 20% chance
+        {
+            parameterNum = 2;
+        } else if(randomDistNum < 90) // 10% chance
+        {
+            parameterNum = 3;
+        } else if (randomDistNum < 95) // 5% chance
+        {
+            parameterNum = 4;
+        }
+        else // 5% chance
+        {
+            parameterNum = 5;
+        } 
+        
+
+
+        switch (parameterNum)
         {
             case 0:
-                shootDelay *= 0.95f;
+                shootDelay *= Mathf.Pow(0.8f, paramsLevels[parameterNum]);
                 break;
             case 1:
-                critChance += 0.05f;
+                damage *= Mathf.Pow(1.85f, 1f / paramsLevels[parameterNum]);
                 break;
             case 2:
-                damage += 10f;
+                bulletAngleSpread = 10f * Mathf.Pow(0.95f, paramsLevels[parameterNum]);
                 break;
             case 3:
-                bulletAngleSpread *= 0.9f;
+                critChance *= Mathf.Pow(2f, 1f / paramsLevels[parameterNum]);
                 break;
             case 4:
                 bulletsAtTheTime += 1;
+                damage *= 0.8f;
+                bulletAngleSpread *= 1.2f;
+                break;
+            case 5:
+                bulletsPenetration += 1;
+                damage *= 0.9f;
+                shootDelay *= 1.1f;
                 break;
             default:
                 break;
         }
+
+        paramsLevels[parameterNum]++;
     }
 
+    public void UpgradeParameter(int parameterNum)
+    {
+        switch (parameterNum)
+        {
+            case 0:
+                shootDelay *= Mathf.Pow(0.8f, 1f / paramsLevels[parameterNum]);
+                break;
+            case 1:
+                damage *= Mathf.Pow(2f, 1f / paramsLevels[parameterNum]);
+                break;
+            case 2:
+                bulletAngleSpread *= Mathf.Pow(0.7f, 1f / paramsLevels[parameterNum]);
+                break;
+            case 3:
+                critChance *= Mathf.Pow(2f, 1f / paramsLevels[parameterNum]);
+                break;
+            case 4:
+                bulletsAtTheTime += 1;
+                damage *= 0.8f;
+                bulletAngleSpread *= 1.2f;
+                break;
+            case 5:
+                bulletsPenetration += 1;
+                damage *= 0.9f;
+                shootDelay *= 1.2f;
+                break;
+            default:
+                break;
+        }
+
+        paramsLevels[parameterNum]++;
+    }
 
     Vector3 mousePos;
 
@@ -100,7 +167,8 @@ public class PlayerGunController : MonoBehaviour
                 Vector3 direction = (mousePos - gunTransform.position).normalized;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + Random.Range(-bulletAngleSpread, bulletAngleSpread);
 
-                Instantiate(bulletPrefab, bulletsSpawnPosition.position, Quaternion.AngleAxis(angle, Vector3.forward));
+                ProjectileScript bullet = Instantiate(bulletPrefab, bulletsSpawnPosition.position, Quaternion.AngleAxis(angle, Vector3.forward)).GetComponent<ProjectileScript>();
+                bullet.SetParameters(damage, critChance, bulletsPenetration);
             }
 
             yield return new WaitForSeconds(shootDelay);
