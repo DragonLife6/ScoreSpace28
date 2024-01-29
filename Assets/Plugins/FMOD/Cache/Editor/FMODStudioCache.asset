@@ -1,6 +1,242 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8910081081609397972
+=======
+--- !u!114 &-8916770529153900608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD SS28/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+  lastModified: 638421311221791528
+=======
+  lastModified: 638421264869065979
+>>>>>>> 4b504698ca643986b8699c738cf24596bdadca91
+=======
+  lastModified: 638420808850902233
+>>>>>>> Stashed changes
+  FileSizes:
+  - Name: Desktop
+    Value: 1184
+  Exists: 1
+--- !u!114 &-8603351688169768025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: 1212438588
+    Data2: 1310584832
+    Data3: 404054414
+    Data4: -965382388
+  Banks:
+  - {fileID: -5692659717167905573}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 70652
+--- !u!114 &-7092187109874527779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/MenuMusic
+  Guid:
+    Data1: -1899780195
+    Data2: 1280472841
+    Data3: 101335169
+    Data4: 1699699614
+  Banks:
+  - {fileID: -5692659717167905573}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 25492
+--- !u!114 &-5823163944263519547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Hit
+  Guid:
+    Data1: -1604323008
+    Data2: 1087649576
+    Data3: 2116560257
+    Data4: -292541478
+  Banks:
+  - {fileID: -5692659717167905573}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5692659717167905573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD SS28/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+  lastModified: 638421311221771585
+=======
+  lastModified: 638421264868876490
+>>>>>>> 4b504698ca643986b8699c738cf24596bdadca91
+=======
+  lastModified: 638420808850892032
+>>>>>>> Stashed changes
+  FileSizes:
+  - Name: Desktop
+    Value: 1235712
+  Exists: 1
+--- !u!114 &-337654720033210996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mutation
+  m_EditorClassIdentifier: 
+  Path: event:/Mutation
+  Guid:
+    Data1: -246276002
+    Data2: 1083416745
+    Data3: -25068655
+    Data4: -1620467415
+  Banks:
+  - {fileID: -5692659717167905573}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -8916770529153900608}
+  - {fileID: -5692659717167905573}
+  EditorEvents:
+  - {fileID: -8603351688169768025}
+  - {fileID: -5823163944263519547}
+  - {fileID: 229721332406548064}
+  - {fileID: -337654720033210996}
+  - {fileID: 5038764705960688841}
+  - {fileID: -7092187109874527779}
+  - {fileID: 5917385687284851439}
+  - {fileID: 4107191243247886576}
+  - {fileID: 6459473814670611335}
+  - {fileID: 5552730244521032235}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -5692659717167905573}
+  StringsBanks:
+  - {fileID: -8916770529153900608}
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+  cacheTime: 638421311221791528
+=======
+  cacheTime: 638421264869065979
+>>>>>>> 4b504698ca643986b8699c738cf24596bdadca91
+=======
+  cacheTime: 638420808850902233
+>>>>>>> Stashed changes
+  cacheVersion: 131609
+--- !u!114 &229721332406548064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Gunshot
+  m_EditorClassIdentifier: 
+  Path: event:/Gunshot
+  Guid:
+    Data1: -749245364
+    Data2: 1182334674
+    Data3: -582158178
+    Data4: -1277596448
+  Banks:
+  - {fileID: -5692659717167905573}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4107191243247886576
+>>>>>>> 77ad556781ed20ac28a033018b3310139b6052b1
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

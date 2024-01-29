@@ -31,13 +31,14 @@ public class PlayerExpirience : MonoBehaviour
 
             LevelUP();
         }
-
+        Debug.Log("this is the current exp: " + playerExpirience);
         xpSlider.UpdateSlider(playerExpirience, expForLevelUP);
     }
 
     public void ApplyBonusExpirience(int amount)
     {
-        ApplyExpirience(amount);
+        int newAmount = Mathf.FloorToInt(expForLevelUP * (amount / 100));
+        ApplyExpirience(newAmount);
     }
 
 
