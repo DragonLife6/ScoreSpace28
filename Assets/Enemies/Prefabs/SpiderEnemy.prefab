@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2247617211406475160}
   - component: {fileID: -3956118177340298796}
   - component: {fileID: -4270133962004030214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpiderEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -163,7 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePopup: {fileID: 2139387369336442378, guid: 0ce7b4a542ad2204da9e5c680cd5ab84, type: 3}
-  enemyMaxHealth: 15
+  enemyMaxHealth: 20
+  basicScale: {x: 1, y: 1, z: 1}
 --- !u!114 &2247617211406475160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +227,7 @@ MonoBehaviour:
   - {fileID: 5629879081163288515}
   duration: 0.1
   flashMaterial: {fileID: 2100000, guid: ec3698b2a15090f46a94b88cc96588e4, type: 2}
+  healMaterial: {fileID: 0}
   spriteDefault: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1186675434554726831
 GameObject:
@@ -237,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5960410061696592396}
   - component: {fileID: 3753193560724143844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Claws
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7721099390391949913}
   - component: {fileID: 4486493776183017095}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5168352347453629150}
   - component: {fileID: 4554033234850929482}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8448924228272690299}
   - component: {fileID: 5629879081163288515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

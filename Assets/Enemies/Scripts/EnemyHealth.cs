@@ -11,6 +11,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] float enemyMaxHealth = 10;
     float enemyHealth;
 
+    [SerializeField] Vector3 basicScale;
+
     private void Start()
     {
         enemyHealth = enemyMaxHealth;
@@ -65,12 +67,16 @@ public class EnemyHealth : MonoBehaviour
     public void ApplyMaxHealthCoef(float coef)
     {
         enemyMaxHealth *= coef;
-        if (coef <= 2f)
+        if (coef == 0)
         {
-            transform.localScale = Vector3.one * coef;
+            transform.localScale = basicScale;
+        }
+        else if (coef <= 2f)
+        {
+            transform.localScale = basicScale * coef;
         } else
         {
-            transform.localScale = Vector3.one * 2f;
+            transform.localScale = basicScale * 2f;
         }
         enemyHealth = enemyMaxHealth;
     }

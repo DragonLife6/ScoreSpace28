@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2512910090977894935}
   - component: {fileID: 6476125258595019355}
   - component: {fileID: 598594143607014135}
-  m_Layer: 0
+  - component: {fileID: 6941236541316512320}
+  m_Layer: 3
   m_Name: PitOrSomeObsticle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +131,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6941236541316512320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2567876776735394992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1c0f500d2504f4690886a79bf53602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2642484867641643120
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,9 +240,10 @@ GameObject:
   - component: {fileID: 5015933943515968325}
   - component: {fileID: 9182550108857898648}
   - component: {fileID: 2225071217403711289}
-  m_Layer: 0
+  - component: {fileID: 387887475678249291}
+  m_Layer: 3
   m_Name: PitOrSomeObsticle (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,3 +360,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &387887475678249291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200210975723710768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1c0f500d2504f4690886a79bf53602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

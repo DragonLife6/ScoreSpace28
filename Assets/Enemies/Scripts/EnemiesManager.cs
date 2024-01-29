@@ -75,6 +75,7 @@ public class EnemiesManager : MonoBehaviour
         }
 
         superMutationChance += 0.01f;
+        maxEnemyLvl++;
     }
 
     private void Update()
@@ -83,7 +84,7 @@ public class EnemiesManager : MonoBehaviour
         {
             ChangeParameters();
             nextParameterChangeTime = Time.time + changeInterval;
-            if (changeInterval >= 3f)
+            if (changeInterval >= 7f)
             {
                 changeInterval *= 0.9f;
             }
