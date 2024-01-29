@@ -48,6 +48,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void ApplyHealing(float healingAmount)
+    {
+        // Player healing sound
+        currentPlayerHP += healingAmount;
+        hitFlashScript.HealFlash();
+
+        if (currentPlayerHP > maxPlayerHP)
+        {
+            currentPlayerHP = maxPlayerHP;
+        }
+
+        hpSlider.UpdateSlider(currentPlayerHP, maxPlayerHP);
+    }
+
+
     void OnPlayerDeath()
     {
         StartCoroutine(playerScore.SendScore());

@@ -7,6 +7,7 @@ public class HitFlashScript : MonoBehaviour
     [SerializeField] SpriteRenderer[] materialsToChange;
     [SerializeField] float duration;
     [SerializeField] Material flashMaterial;
+    [SerializeField] Material healMaterial;
     [SerializeField] Material spriteDefault;
 
     public void HitFlash()
@@ -14,6 +15,16 @@ public class HitFlashScript : MonoBehaviour
         foreach (var item in materialsToChange)
         {
             item.material = flashMaterial;
+        }
+
+        StartCoroutine(ResetColorAfterDelay());
+    }
+
+    public void HealFlash()
+    {
+        foreach (var item in materialsToChange)
+        {
+            item.material = healMaterial;
         }
 
         StartCoroutine(ResetColorAfterDelay());

@@ -35,6 +35,12 @@ public class PlayerExpirience : MonoBehaviour
         xpSlider.UpdateSlider(playerExpirience, expForLevelUP);
     }
 
+    public void ApplyBonusExpirience(int amount)
+    {
+        ApplyExpirience(amount);
+    }
+
+
     private void LevelUP()
     {
         Time.timeScale = 0f;

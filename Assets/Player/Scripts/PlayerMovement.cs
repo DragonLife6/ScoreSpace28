@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5.0f;
+    float basicMoveSpeed;
     
     [SerializeField] Animator animator;
     PlayerHealth playerHealth;
@@ -13,6 +14,21 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         playerHealth = GetComponent<PlayerHealth>();
+        basicMoveSpeed = moveSpeed;
+    }
+
+
+    public void ApplySpeedBoost()
+    {
+        // Player speed boost sound
+        moveSpeed = moveSpeed * 1.5f;
+        StartCoroutine(ResetSpeed());
+    }
+
+    IEnumerator ResetSpeed()
+    {
+        yield return new WaitForSeconds(5f);
+        moveSpeed = basicMoveSpeed;
     }
 
     void Update()
