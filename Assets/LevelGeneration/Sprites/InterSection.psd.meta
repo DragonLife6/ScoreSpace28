@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b989cffebbf74344aaa07561a200520f
+guid: 5ab54d881235df04298be44cc9eb9eac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,76 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Obstacles_0
+      name: InterSection_0
       rect:
         serializedVersion: 2
-        x: 802
-        y: 1788
-        width: 302
-        height: 303
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74f490eb6309e5e448050a7cde217f46
-      internalID: -779951228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacles_2
-      rect:
-        serializedVersion: 2
-        x: 1321
-        y: 1730
-        width: 363
-        height: 344
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0831edb47ae896140b04f802acdcf637
-      internalID: 1762524165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacles_15
-      rect:
-        serializedVersion: 2
-        x: 613
-        y: 1002
-        width: 644
-        height: 420
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e97bf441b5e5f454ea8d198767dbdb87
-      internalID: -255828643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacles_1
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 2090
-        width: 306
-        height: 339
+        x: 0
+        y: 226
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 894687693b2d122408ebdca66d3bc7c1
-      internalID: 1106978766
+      spriteID: 5845ce812fe5c1242814b9108ee6769b
+      internalID: 1649966713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Obstacles_3
+      name: InterSection_1
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 2074
-        width: 364
-        height: 355
+        x: 0
+        y: 52
+        width: 1024
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc2824d57fc18544492a7057b43c9fa8
-      internalID: -1659330442
+      spriteID: eded7d26ce97498459fba2bb62dbabac
+      internalID: 1434129261
       vertices: []
       indices: 
       edges: []
@@ -251,22 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Obstacles_0: -779951228
-      Obstacles_1: 1106978766
-      Obstacles_10: 1176347538
-      Obstacles_11: 1412322733
-      Obstacles_12: -614834263
-      Obstacles_13: 88808621
-      Obstacles_14: -101949341
-      Obstacles_15: -255828643
-      Obstacles_2: 1762524165
-      Obstacles_3: -1659330442
-      Obstacles_4: 1523718563
-      Obstacles_5: 1845184683
-      Obstacles_6: -590950170
-      Obstacles_7: 1909922722
-      Obstacles_8: 1663012995
-      Obstacles_9: 1037651219
+      InterSection_0: 1649966713
+      InterSection_1: 1434129261
   mipmapLimitGroupName: 
   pSDRemoveMatte: 1
   userData: 
