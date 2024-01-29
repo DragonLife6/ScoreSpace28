@@ -12,6 +12,7 @@ public class HealingObjectScript : MonoBehaviour
         {
             if(collision.CompareTag("Player"))
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Powerup");
                 collision.gameObject.SendMessage("ApplyHealing", healingAmount);
 
                 Destroy(gameObject);

@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplySpeedBoost()
     {
-        // Player speed boost sound
         moveSpeed = moveSpeed * 1.5f;
         StartCoroutine(ResetSpeed());
     }

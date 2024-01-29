@@ -10,6 +10,7 @@ public class SpeedBoostObjectScript : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Powerup");
                 collision.gameObject.SendMessage("ApplySpeedBoost");
 
                 Destroy(gameObject);

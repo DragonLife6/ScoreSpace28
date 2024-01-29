@@ -12,6 +12,7 @@ public class BonusExpirienceObjectScript : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Powerup");
                 collision.gameObject.SendMessage("ApplyBonusExpirience", expienceAmount);
 
                 Destroy(gameObject);
