@@ -756,7 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePopup: {fileID: 2139387369336442378, guid: 0ce7b4a542ad2204da9e5c680cd5ab84, type: 3}
   enemyMaxHealth: 35
-  scorePoints: 4
+  scorePoints: 9
   basicScale: {x: 0.5, y: 0.5, z: 1}
 --- !u!114 &8227299219673534578
 MonoBehaviour:
