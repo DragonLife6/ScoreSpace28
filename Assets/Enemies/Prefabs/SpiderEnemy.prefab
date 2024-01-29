@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2247617211406475160}
   - component: {fileID: -3956118177340298796}
   - component: {fileID: -4270133962004030214}
+  - component: {fileID: 6372310473759034941}
   m_Layer: 6
   m_Name: SpiderEnemy
   m_TagString: Enemy
@@ -229,6 +230,30 @@ MonoBehaviour:
   flashMaterial: {fileID: 2100000, guid: ec3698b2a15090f46a94b88cc96588e4, type: 2}
   healMaterial: {fileID: 0}
   spriteDefault: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &6372310473759034941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888210883217293467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67b276ea5ee66d4fb1b220ff3e08ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSprites:
+  - {fileID: 241676393687816910}
+  - {fileID: 3753193560724143844}
+  - {fileID: 4554033234850929482}
+  - {fileID: 4486493776183017095}
+  - {fileID: 5629879081163288515}
+  mutatedSprites:
+  - {fileID: -910430684, guid: 05835ed3ecbdef742bc3b3659fb1750e, type: 3}
+  - {fileID: -231498984, guid: 05835ed3ecbdef742bc3b3659fb1750e, type: 3}
+  - {fileID: -795415598, guid: 05835ed3ecbdef742bc3b3659fb1750e, type: 3}
+  - {fileID: -1361193082, guid: 05835ed3ecbdef742bc3b3659fb1750e, type: 3}
+  - {fileID: -1079167262, guid: 05835ed3ecbdef742bc3b3659fb1750e, type: 3}
 --- !u!1 &1186675434554726831
 GameObject:
   m_ObjectHideFlags: 0

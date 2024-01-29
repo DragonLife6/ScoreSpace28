@@ -67,17 +67,22 @@ public class EnemyHealth : MonoBehaviour
     public void ApplyMaxHealthCoef(float coef)
     {
         enemyMaxHealth *= coef;
+        enemyHealth = enemyMaxHealth;
+    }
+
+    public void ApplySizeCoef(float coef)
+    {
         if (coef == 0)
         {
             transform.localScale = basicScale;
         }
-        else if (coef <= 2f)
+        else if (coef <= 1.5f)
         {
             transform.localScale = basicScale * coef;
-        } else
-        {
-            transform.localScale = basicScale * 2f;
         }
-        enemyHealth = enemyMaxHealth;
+        else
+        {
+            transform.localScale = basicScale * 1.5f;
+        }
     }
 }

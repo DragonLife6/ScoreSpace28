@@ -13,7 +13,7 @@ public class ProjectileScript : MonoBehaviour
 
     private void Start()
     {   
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2f);
     }
 
     private void Update()
@@ -40,15 +40,22 @@ public class ProjectileScript : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+
             FMODUnity.RuntimeManager.PlayOneShot("event:/Hit");
             currentPenetration++;
-            if (CheckCritDamage())
+            try
             {
-                other.gameObject.SendMessage("ApplyCritDamage", damage * 1.5f);
-            }
-            else
+                if (CheckCritDamage())
+                {
+                    other.gameObject.SendMessage("ApplyCritDamage", damage * 1.5f);
+                }
+                else
+                {
+                    other.gameObject.SendMessage("ApplyDamage", damage);
+                }
+            } catch(System.Exception e)
             {
-                other.gameObject.SendMessage("ApplyDamage", damage);
+                Debug.Log("Error: " + e);
             }
 
             if (currentPenetration >= bulletMaxPenetrations)

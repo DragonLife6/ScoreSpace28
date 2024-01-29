@@ -3912,12 +3912,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980e167f81c1c79499249a5d514a0c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testMode: 1
+  testMode: 0
   enemyPrefabs:
   - {fileID: 4285546178867048897, guid: 6c4246dbe46faa947b771de1e1449f1c, type: 3}
   - {fileID: 888210883217293467, guid: 056c2a0962dd001439e01ed4e205dd1a, type: 3}
   - {fileID: 535551766626903053, guid: 4f4265a65d0515f4ca0199561ad688eb, type: 3}
   - {fileID: 6486748499510536621, guid: d7bfe4111a1bc0c4db0eef710ec78de7, type: 3}
+  - {fileID: 1443793775128023048, guid: fe16a9c1d98596b4faa731e09753ea34, type: 3}
   spawnDistance: 40
   maxDistance: 60
   player: {fileID: 1241597224}

@@ -13,6 +13,7 @@ public class EnemiesManager : MonoBehaviour
     int maxEnemies = 1; // Count of enemies spawned every "spawnInterval" seconds
     float spawnInterval = 1.0f;
     float maxHPCoef = 1f;
+    float sizeCoef = 1f;
     float movementSpeedCoef = 1f;
     float damageCoef = 1f;
     float superMutationChance = 0.01f;
@@ -33,8 +34,11 @@ public class EnemiesManager : MonoBehaviour
     float nextParameterChangeTime; // For changing difficulty
     [SerializeField] float changeInterval = 30f;
 
+    int mutationsCount;
+
     void Start()
     {
+        mutationsCount = 0;
         if (!testMode)
         {
             InvokeRepeating("SpawnEnemies", 0.1f, spawnInterval);
@@ -45,37 +49,57 @@ public class EnemiesManager : MonoBehaviour
 
     private void ChangeParameters()
     {
+        mutationsCount++;
         int randomDistNum = Random.Range(0, 100);
 
-        if (randomDistNum < 20) // 20% chance
+        if (randomDistNum < 5) // 5% chance
         {
             maxEnemies++;
 
             Debug.Log("+ max enemies");
         }
-        else if (randomDistNum < 40) // 20% chance
+        else if (randomDistNum < 10) // 5% chance
         {
             spawnInterval *= 0.95f;
             Debug.Log("- spawn interval");
         }
-        else if (randomDistNum < 75) // 35% chance
+        else if (randomDistNum < 50) // 40% chance
         {
             maxHPCoef *= 1.1f;
+            sizeCoef *= 1.1f;
             Debug.Log("+ max health" + maxHPCoef.ToString());
         }
-        else if (randomDistNum < 95) // 20% chance
+        else if (randomDistNum < 80) // 30% chance
         {
             movementSpeedCoef *= 1.05f;
             Debug.Log("+ move speed");
         }
-        else // 5% chance
+        else // 20% chance
         {
             damageCoef *= 1.05f;
             Debug.Log("+ damage");
         }
 
         superMutationChance += 0.01f;
-        maxEnemyLvl++;
+
+        if(mutationsCount >= 5)
+        {
+            maxEnemyLvl++;
+            mutationsCount = 0;
+            if (maxEnemyLvl < enemyPrefabs.Length)
+            {
+                sizeCoef = 1f;
+                maxHPCoef = 1f + 0.1f * (maxEnemyLvl - 1);
+                movementSpeedCoef = 1f + 0.1f * (maxEnemyLvl - 2);
+                damageCoef = 1f;
+                superMutationChance = 0.03f;
+            }
+        }
+        if(maxEnemyLvl >= 3)
+        {
+            minEnemyLvl = maxEnemyLvl - 2;
+        }
+
     }
 
     private void Update()
@@ -101,6 +125,7 @@ public class EnemiesManager : MonoBehaviour
         Vector3 spawnPosition = GetRandomSpawnPosition();
         GameObject newEnemy = Instantiate(enemyRef, spawnPosition, Quaternion.identity);
         newEnemy.SendMessage("ApplyMaxHealthCoef", maxHPCoef);
+        newEnemy.SendMessage("ApplySizeCoef", sizeCoef);
         newEnemy.SendMessage("ApplyDamageCoef", damageCoef);
         newEnemy.SendMessage("ApplySpeedCoef", movementSpeedCoef);
         enemies.Add(newEnemy.transform);
@@ -122,7 +147,7 @@ public class EnemiesManager : MonoBehaviour
             newEnemy.SendMessage("ApplyMaxHealthCoef", maxHPCoef);
             newEnemy.SendMessage("ApplyDamageCoef", damageCoef);
             newEnemy.SendMessage("ApplySpeedCoef", movementSpeedCoef);
-            //newEnemy.SendMessage("ApplyMutationChance", superMutationChance); // Visual mutation
+            newEnemy.SendMessage("ApplyMutationChance", superMutationChance); // Visual mutation
             enemies.Add(newEnemy.transform);
         }
     }

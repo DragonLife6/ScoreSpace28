@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: 369ad8201059af943af8676950aa0b32
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemies_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1687
+        width: 483
+        height: 849
+      alignment: 9
+      pivot: {x: 0.6739152, y: 0.50341165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167e86574ebc7064d85b12c0927d967f
+      internalID: 949067953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Hand_Right
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 2237
+        width: 165
+        height: 256
+      alignment: 9
+      pivot: {x: 0.90376717, y: 0.8960171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00535297e048e2142854c72cd706c559
+      internalID: -469231655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Hand_Left
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 2221
+        width: 143
+        height: 268
+      alignment: 9
+      pivot: {x: 0.80383813, y: 0.9107092}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4675336df78867246af62a05b0bd63a0
+      internalID: -659829186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Head
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 2226
+        width: 338
+        height: 334
+      alignment: 9
+      pivot: {x: 0.6885351, y: 0.14443184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58861b9b3ee9524dbae09b00a8a7cdb
+      internalID: -1638971787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Leg_Right
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1951
+        width: 201
+        height: 138
+      alignment: 9
+      pivot: {x: 0.8705189, y: 0.84402245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad281cfe13dd6944c8d762a9160d01cb
+      internalID: 310239406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Leg_Left
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1907
+        width: 90
+        height: 194
+      alignment: 9
+      pivot: {x: 0.42418754, y: 0.8893137}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fee2e4c1d3d2a345aa44b26d944aa31
+      internalID: 507382575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Body
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1793
+        width: 228
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdacd3d0d8e5134fb0d7919168cb9dc
+      internalID: 840873610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 1302
+        height: 1551
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3687f43a9bb7af3449cb40f645a6c3b7
+      internalID: -259788706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worm_Head
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 701
+        width: 244
+        height: 231
+      alignment: 9
+      pivot: {x: 0.78292245, y: 0.32363376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48793eb75bc57e459c6aa87ccd42dac
+      internalID: 1803374750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worm_Body_1
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 747
+        width: 165
+        height: 155
+      alignment: 9
+      pivot: {x: 0.14334753, y: 0.7409408}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744fd94f2fc948c42a232ec69c8b2d36
+      internalID: -533253950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worm_Body_2
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 752
+        width: 139
+        height: 92
+      alignment: 9
+      pivot: {x: 0.052210964, y: 0.64761287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098d23f940067f042930094ab65fe208
+      internalID: 2077930677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worm_Leg
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 526
+        width: 91
+        height: 161
+      alignment: 9
+      pivot: {x: 0.7362879, y: 0.858486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9dbfc6ff5275cd4dba429835a13a96e
+      internalID: -860990702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worm_Body_0
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 538
+        width: 183
+        height: 178
+      alignment: 9
+      pivot: {x: 0.5556574, y: 0.5953678}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a2ac7c6ac2ba746ba38c36adb72afd
+      internalID: 495510446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Worm_Body_3
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 633
+        width: 88
+        height: 80
+      alignment: 9
+      pivot: {x: 0.12706132, y: 0.160495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ad448ec20086b4c8b462ead43e2c07
+      internalID: 840668450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies_14
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 117
+        width: 641
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1b8b29de691df43afc6e487737caa2
+      internalID: 422464699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Leg_Left_B
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1763
+        width: 99
+        height: 147
+      alignment: 9
+      pivot: {x: 0.2647742, y: 0.93773085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc4f39dc4922c54aa33b8e154328881
+      internalID: 1020982446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Leg_Right_B
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1773
+        width: 75
+        height: 181
+      alignment: 9
+      pivot: {x: 0.64834064, y: 0.9415944}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62557d92e125284492ecd341308a784
+      internalID: 1409154395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Enemies_0: 949067953
+      Enemies_14: 422464699
+      Enemies_7: -259788706
+      Skeleton_Body: 840873610
+      Skeleton_Hand_Left: -659829186
+      Skeleton_Hand_Right: -469231655
+      Skeleton_Head: -1638971787
+      Skeleton_Leg_Left: 507382575
+      Skeleton_Leg_Left_B: 1020982446
+      Skeleton_Leg_Right: 310239406
+      Skeleton_Leg_Right_B: 1409154395
+      Worm_Body_0: 495510446
+      Worm_Body_1: -533253950
+      Worm_Body_2: 2077930677
+      Worm_Body_3: 840668450
+      Worm_Head: 1803374750
+      Worm_Leg: -860990702
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
