@@ -14,4 +14,9 @@ public class AudioManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Footstep");
     }
+
+    public void OnMenuHover()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/MenuHover");
+    }
 }
