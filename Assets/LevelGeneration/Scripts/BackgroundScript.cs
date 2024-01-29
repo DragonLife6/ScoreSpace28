@@ -9,7 +9,7 @@ public class BackgroundScript : MonoBehaviour
     Transform player;
     int n = 0, m = 0;
 
-    float playtformSize = 40f;
+    float playtformSize = 40.6f;
 
     GameObject getPlatform()
     {

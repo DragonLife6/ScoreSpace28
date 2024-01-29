@@ -16,10 +16,14 @@ public class UpgradeMenuScript : MonoBehaviour
     int selectedVariant;
     [SerializeField] Button confirmButton;
 
+    private void Start()
+    {
+        confirmButton.interactable = false;
+    }
+
     public void SetupUpgradeMenu(GunCharacteristicSerializable[] variants)
     {
         selectedVariant = -1;
-        confirmButton.interactable = false;
         for (int i = 0; i < 3; i++)
         {
             variantsID[i] = variants[i].GetId();
@@ -42,6 +46,7 @@ public class UpgradeMenuScript : MonoBehaviour
             Time.timeScale = 1f;
             gameObject.SetActive(false);
             playerGun.UpgradeParameter(variantsID[selectedVariant]);
+            confirmButton.interactable = false;
         }
     }
 }

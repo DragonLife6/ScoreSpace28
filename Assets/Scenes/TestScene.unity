@@ -4035,7 +4035,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9339623, g: 0.7961319, b: 0.58592916, a: 1}
     m_PressedColor: {r: 0.7924528, g: 0.5803427, b: 0.2728729, a: 0.8352941}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.8156863}
-    m_DisabledColor: {r: 0.8396226, g: 0.51189303, b: 0.35248306, a: 0.5019608}
+    m_DisabledColor: {r: 0.8396226, g: 0.51189303, b: 0.35248306, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4049,7 +4049,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 978226667}
   m_OnClick:
     m_PersistentCalls:
@@ -8207,13 +8207,22 @@ MonoBehaviour:
   - {fileID: 2642484867641643120, guid: dfa1465d537831843a07051694a7e683, type: 3}
   - {fileID: 2642484867641643120, guid: 258bbc4d2cd82d5498ff3b0fb6f800dc, type: 3}
   - {fileID: 2642484867641643120, guid: 635401bc1ee81c84d9919780baecc85a, type: 3}
-  - {fileID: 1108828061099969104, guid: e4e5cd0e77f65d24f924abfb586e9256, type: 3}
-  - {fileID: 1108828061099969104, guid: e4e5cd0e77f65d24f924abfb586e9256, type: 3}
-  - {fileID: 1108828061099969104, guid: e4e5cd0e77f65d24f924abfb586e9256, type: 3}
-  - {fileID: 1108828061099969104, guid: e4e5cd0e77f65d24f924abfb586e9256, type: 3}
+  - {fileID: 2642484867641643120, guid: 218ab18d73b02da459f4ed39ba01eb8f, type: 3}
+  - {fileID: 2642484867641643120, guid: 8e9d5569533b7d34981d617fc8cfa76d, type: 3}
+  - {fileID: 2642484867641643120, guid: a5b74523d98923544bd557e29612403c, type: 3}
+  - {fileID: 2642484867641643120, guid: ad11380dbe37c0f48b6aada56e0e5f86, type: 3}
+  - {fileID: 2642484867641643120, guid: fb846b173a718764a8e6c4010683e4a7, type: 3}
+  - {fileID: 2642484867641643120, guid: fe2b77e6b4ae1e14d811e98c6675e7f7, type: 3}
+  - {fileID: 2642484867641643120, guid: 38250322ce0ea4340b84702969352ded, type: 3}
   - {fileID: 4499245731375032801, guid: f006ea74a0d439c4586d3f48fd6192b2, type: 3}
-  - {fileID: 4499245731375032801, guid: f006ea74a0d439c4586d3f48fd6192b2, type: 3}
-  - {fileID: 4499245731375032801, guid: f006ea74a0d439c4586d3f48fd6192b2, type: 3}
+  - {fileID: 4499245731375032801, guid: daf26c83a50d0d04db3e498e9aed3d4d, type: 3}
+  - {fileID: 4499245731375032801, guid: df63d342e94004c4185a7b69e83e91cb, type: 3}
+  - {fileID: 4499245731375032801, guid: ef6eeab488b23244594a3e246491c339, type: 3}
+  - {fileID: 1108828061099969104, guid: e4e5cd0e77f65d24f924abfb586e9256, type: 3}
+  - {fileID: 1108828061099969104, guid: e4e5cd0e77f65d24f924abfb586e9256, type: 3}
+  - {fileID: 4499245731375032801, guid: 644d844a65690654081c1cc8adc76a36, type: 3}
+  - {fileID: 4499245731375032801, guid: 4cffa8493ba3dc94f8cfa5d8fbe94738, type: 3}
+  - {fileID: 4499245731375032801, guid: cb2b9e2db9dfeb4448e57e2767fa9683, type: 3}
 --- !u!4 &1478470309
 Transform:
   m_ObjectHideFlags: 0
