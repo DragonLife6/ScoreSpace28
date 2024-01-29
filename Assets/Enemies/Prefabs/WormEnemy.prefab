@@ -332,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePopup: {fileID: 2139387369336442378, guid: 0ce7b4a542ad2204da9e5c680cd5ab84, type: 3}
   enemyMaxHealth: 15
+  scorePoints: 1
   basicScale: {x: 0.6, y: 0.6, z: 1}
 --- !u!114 &8719304933593315401
 MonoBehaviour:
@@ -345,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce62aa1b50e358c4e9230b50cf8e7a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
+  moveSpeed: 1.8
   damage: 10
   deathOnCollision: 1
 --- !u!50 &6608969898137620159

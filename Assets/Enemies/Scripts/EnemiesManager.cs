@@ -110,7 +110,7 @@ public class EnemiesManager : MonoBehaviour
             nextParameterChangeTime = Time.time + changeInterval;
             if (changeInterval >= 7f)
             {
-                changeInterval *= 0.9f;
+                changeInterval *= 0.95f;
             }
         }
     }
@@ -131,6 +131,22 @@ public class EnemiesManager : MonoBehaviour
         enemies.Add(newEnemy.transform);
     }
 
+    private GameObject GetRandomEnemyPrefab()
+    {
+        int num = Random.Range(0, 100);
+        int prefabNum;
+
+        if (num < 75)
+        {
+            prefabNum = minEnemyLvl;
+        } else
+        {
+            prefabNum = maxEnemyLvl - 1;
+        }
+
+        return enemyPrefabs[prefabNum];
+    }
+
     void SpawnEnemies()
     {
         for (int i = 0; i < maxEnemies; i++)
@@ -140,10 +156,7 @@ public class EnemiesManager : MonoBehaviour
                 maxEnemyLvl = enemyPrefabs.Length;
             }
 
-            int randomNum = Random.Range(minEnemyLvl, maxEnemyLvl);
-
-            Vector3 spawnPosition = GetRandomSpawnPosition();
-            GameObject newEnemy = Instantiate(enemyPrefabs[randomNum], spawnPosition, Quaternion.identity);
+            GameObject newEnemy = Instantiate(GetRandomEnemyPrefab(), GetRandomSpawnPosition(), Quaternion.identity);
             newEnemy.SendMessage("ApplyMaxHealthCoef", maxHPCoef);
             newEnemy.SendMessage("ApplyDamageCoef", damageCoef);
             newEnemy.SendMessage("ApplySpeedCoef", movementSpeedCoef);

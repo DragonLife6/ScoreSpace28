@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     bool isAlive = true;
 
     [SerializeField] float enemyMaxHealth = 10;
+    [SerializeField] int scorePoints = 1;
     float enemyHealth;
 
     [SerializeField] Vector3 basicScale;
@@ -17,6 +18,8 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyHealth = enemyMaxHealth;
         hitFlash = GetComponent<HitFlashScript>();
+
+        Destroy(gameObject, 30f);
     }
 
     public void ApplyDamage(float damage)
@@ -32,10 +35,10 @@ public class EnemyHealth : MonoBehaviour
 
                 isAlive = false;
                 GameObject player = GameObject.FindWithTag("Player");
-                player.SendMessage("ApplyScore", 1);
-                player.SendMessage("ApplyExpirience", 1);
+                player.SendMessage("ApplyScore", scorePoints);
+                player.SendMessage("ApplyExpirience", scorePoints);
 
-                DamagePopupScript.Create(damagePopup, transform.position, "+1", false, true);
+                DamagePopupScript.Create(damagePopup, transform.position, "+" + scorePoints.ToString(), false, true);
                 Destroy(gameObject);
             } 
             DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), false, false);
@@ -53,10 +56,10 @@ public class EnemyHealth : MonoBehaviour
             {
                 isAlive = false;
                 GameObject player = GameObject.FindWithTag("Player");
-                player.SendMessage("ApplyScore", 1);
-                player.SendMessage("ApplyExpirience", 1);
+                player.SendMessage("ApplyScore", scorePoints);
+                player.SendMessage("ApplyExpirience", scorePoints);
 
-                DamagePopupScript.Create(damagePopup, transform.position, "+1", false, true);
+                DamagePopupScript.Create(damagePopup, transform.position, "+" + scorePoints.ToString(), false, true);
                 Destroy(gameObject);
             }
             DamagePopupScript.Create(damagePopup, transform.position, Mathf.FloorToInt(damage).ToString(), true, false);

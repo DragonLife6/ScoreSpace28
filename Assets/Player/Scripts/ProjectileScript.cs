@@ -13,7 +13,7 @@ public class ProjectileScript : MonoBehaviour
 
     private void Start()
     {   
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 
     private void Update()
