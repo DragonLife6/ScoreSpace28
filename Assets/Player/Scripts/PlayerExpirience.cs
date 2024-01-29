@@ -37,7 +37,7 @@ public class PlayerExpirience : MonoBehaviour
 
     public void ApplyBonusExpirience(int amount)
     {
-        int newAmount = Mathf.FloorToInt(expForLevelUP * (amount / 100));
+        int newAmount = Mathf.FloorToInt(expForLevelUP * (amount / 100f));
         ApplyExpirience(newAmount);
     }
 

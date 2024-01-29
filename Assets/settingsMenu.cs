@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using FMOD;
 using FMODUnity;
-
+using UnityEngine.UI;
 
 public class settingsMenu : MonoBehaviour
 {
@@ -13,11 +13,16 @@ public class settingsMenu : MonoBehaviour
     public float mastervolume = 1;
     private Bus masterBus;
 
+    [SerializeField] Slider volumeSlider;
 
     private void Awake()
     {
         masterBus = RuntimeManager.GetBus("bus:/");
+        
+        float value;
+        masterBus.getVolume(out value);
 
+        volumeSlider.value = value;
     }
 
     private void Update()
